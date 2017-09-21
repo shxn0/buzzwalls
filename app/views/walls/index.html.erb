@@ -1,0 +1,34 @@
+
+<div class="container">
+  <h1><strong>walls#index</strong></h1><br>
+        <%= link_to "POST", new_wall_path, class: "btn-a" %>
+
+  <div class="column">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          title
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+        <%= link_to "Edit", root_path, class: "btn btn-xs btn-info" %>
+        <%= link_to "Delete", root_path, class:"btn btn-xs btn-default" %>
+      </div>
+    </div>
+    <%= link_to "To top#index", root_path, class:"btn btn-link" %>
+  </div>
+
+</div>
+
+
+
+<!--
+<button type="button" class="btn btn-xs btn-default">Default</button>
+<button type="button" class="btn btn-xs btn-primary">Primary</button>
+<button type="button" class="btn btn-xs btn-success">Success</button>
+<button type="button" class="btn btn-xs btn-info">Info</button>
+<button type="button" class="btn btn-xs btn-warning">Warning</button>
+<button type="button" class="btn btn-xs btn-danger">Danger</button>
+<button type="button" class="btn btn-xs btn-link">Link</button>
+-->
