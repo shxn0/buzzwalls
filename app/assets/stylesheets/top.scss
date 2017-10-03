@@ -12,7 +12,6 @@ html, body {
   min-height: 100%;
   padding-top: 50px; //navbarと重複を避けてheaderの位置を調整するのため
   text-align: center;
-  position: relative;
 }
 
 body {
@@ -54,6 +53,11 @@ li {
 .container{
   padding-bottom: 30px;
   min-height: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+
+
 }
 
 .container-fluid{
@@ -89,6 +93,7 @@ footer {
   padding: 0px 0 10px 0;
   color: white;
   margin: auto;
+  margin-top: 50px;
   }
 
 footer p{
