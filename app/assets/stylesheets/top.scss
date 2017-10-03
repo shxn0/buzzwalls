@@ -6,214 +6,93 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
+html, body {
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  height: 100%;
+  min-height: 100%;
+  padding-top: 50px; //navbarと重複を避けてheaderの位置を調整するのため
+  text-align: center;
+  position: relative;
+}
 
- html,body {
-   width: 100%;
-   height: 100%;
-   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
-   padding-top: 0px;
-   padding-bottom: 30px;
- }
+body {
+  padding-top: 0px;
+}
 
- a {
-   color: #fdcc52;
-   -webkit-transition: all .35s;
-   -moz-transition: all .35s;
-   transition: all .35s;
- }
 
- a:hover, a:focus {
-     color: #fcbd20;
- }
-
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-   font-weight: 200;
-   letter-spacing: 1px;
- }
-
- p {
-   font-size: 18px;
-   line-height: 1.5;
-   margin-bottom: 20px;
- }
-
- footer {
-   width: 100%;
-   background-color: #1c65c6;
-   padding: 0px 0 10px 0;
-   color: white;
-   margin: auto;
-   }
-
- footer p{
-   font-size: 12px;
-   text-align: center;
- }
-
- .navbar{
-   margin-bottom:0px;
-
- }
-
- .container{
-   width:100%;
-   min-height:100%;
-   padding-top: 10px;
-   padding-right: 0px;
-   padding-left: 0px;
-   margin-top: 50px;
-   margin-right: 0px;
-   margin-left: 0px;
-   text-align: center;
- }
-
-.container-main{
+.main {
+  padding-bottom: 15px;
+  position: absolute;
+  height: 100%;
+  min-height: 100%;
   width: 100%;
-  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat; //背景画が繰り返し表示されないようにする
+  background-image: url("main-background.jpg");
+  background-attachment: fixed;
 }
 
-.container-contact{
-  width:100%;
-  margin: 0;
-  padding: 0;
+ul.navbar-nav{
+  float: right;
+}
+//#fdcc52
+//#fcbd20
+
+li {
+  list-style-type: none;
 }
 
-.column{
-  display:block;
-  padding-top: 50px;
-  margin-right:300px;
-  margin-left:300px;
-  padding-right: 20px;
-  padding-left: 20px;
+.icon {
+  padding-bottom: 10px;
+}
+
+
+.row {
+  padding-bottom: 20px;
+}
+
+.container{
+  padding-bottom: 30px;
+  min-height: 100%;
+}
+
+.container-fluid{
+  padding: 0px 0px;
+  min-height: 100%;
+}
+
+
+.panel-heading{
+  text-align: left;
+}
+
+.img-responsive{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field{
+  text-align: left;
+}
+
+.field_icon{
   text-align: center;
-  background-color:white;
 }
 
-.row{
-  display:block;
-  width:100%;
+
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  padding: 0px 0 10px 0;
+  color: white;
+  margin: auto;
+  }
+
+footer p{
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px;
   text-align: center;
 }
- section.contact{
-   padding: 100px 0;
- }
-
- section h2{
-    font-size: 50px;
-    color: black;
- }
-
- .theme-dropdown .dropdown-menu {
-   position: static;
-   display: block;
-   margin-bottom: 20px;
- }
-
- .theme-showcase > p > .btn {
-   margin: 5px 0;
- }
-
-  .theme-showcase .navbar .container {
-     width: auto;
-  }
-
-  section.contact {
-     text-align: center;
-   }
-  section.contact h2 {
-    margin-top: 0;
-    margin-bottom: 25px;
-  }
-
-  section.contact h2 i {
-    color: #dd4b39;
-  }
-
-  section.contact ul.list-social {
-    margin-bottom: 0;
-  }
-
-  section.contact ul.list-social li a {
-    font-size: 40px;
-    line-height: 80px;
-    display: block;
-    width: 80px;
-    height: 80px;
-    color: white;
-    border-radius: 100%;
-  }
-
-  section.contact ul.list-social li.social-twitter a {
-    background-color: #1da1f2;
-  }
-
-  section.contact ul.list-social li.social-twitter a:hover {
-    background-color: #0d95e8;
-  }
-
-  section.contact ul.list-social li.social-facebook a {
-    background-color: #3b5998;
-  }
-
-  section.contact ul.list-social li.social-facebook a:hover {
-    background-color: #344e86;
-  }
-
-  section.contact ul.list-social li.social-google-plus a {
-    background-color: #dd4b39;
-  }
-
-  section.contact ul.list-social li.social-google-plus a:hover {
-    background-color: #d73925;
-  }
-
-  .bg-primary {
-    background: #fdcc52;
-    background: -webkit-linear-gradient(#fdcc52, #fdc539);
-    background: linear-gradient(#fdcc52, #fdc539); }
-
-//#fccc52 #fdc539
-
-  .text-primary {
-    color: #fccc52;
-  }
-
-  .btn-outline {
-    color: white;
-    border: 1px solid;
-    border-color: white;
-  }
-
-  .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
-    color: white;
-    border-color: #fdcc52;
-    background-color: #fdcc52;
-  }
-
-
-
-  .btn-a{
-    display: inline-block;
-    text-decoration: none;
-    color: #668ad8;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    border-radius: 50%;
-    border: solid 2px #668ad8;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    font-weight: bold;
-    transition: .4s;
-  }
-
-  .btn-a:hover {
-      background: #b3e1ff;
-  }

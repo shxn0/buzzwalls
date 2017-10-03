@@ -1,0 +1,23 @@
+
+  <%= form_for(@wall, url: choose_new_or_edit) do |f| %>
+    <% if @wall.errors.any? %>
+      <div id= "error_explanation" class="alert alert-danger" role="alert">
+        <h4><%= @wall.errors.count %>件のエラーがあります！</h4>
+        <ul>
+        <% @wall.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, class: "form-control" %><br>
+    <%= f.label :写真 %>
+    <%= f.file_field :picture, id: :wall_picture %><br>
+    <%= f.hidden_field :picture_cache %><br>
+
+    <%= f.submit "Upload", class: "btn btn-lg btn-primary"%>
+
+  <% end %>
+  <%= link_to "Back to Wall", walls_path, class:"btn btn-lg btn-link"%>

@@ -1,22 +1,41 @@
-
 <div class="container">
-  <h1><strong>walls#index</strong></h1><br>
-        <%= link_to "POST", new_wall_path, class: "btn-a" %>
+  <h1><strong>walls # index</strong></h1><br>
 
-  <div class="column">
-    <div class="row">
+
+  <div class="row col-md-8 col-md-offset-2">
+    <% if notice.nil? == false %>
+      <div class="alert alert-success" role="alert"><p><%= notice %></p></div>
+    <% end %>
+      <%= link_to "POST", new_wall_path, class: "btn btn-lg btn-warning" %>
+  </div>
+
+  <div class="row col-md-8 col-md-offset-2">
+    <div class="column">
+      <% @walls.each do |wall| %>
       <div class="panel panel-default">
         <div class="panel-heading">
-          title
+          <h4><strong><%= wall.title %></strong></h4>
+          <%= profile_img(wall.user) %>
+          <% if wall.user.name.nil? == true %>
+            <% name = "Unknown Name" %>
+            <% else %>
+            <% name = wall.user.name %>
+          <% end %>
+          <%= name %>
         </div>
         <div class="panel-body">
-          Panel content
+          <%= image_tag (wall.picture.url), class:"img-responsive, img-thumbnail" %>
         </div>
-        <%= link_to "Edit", root_path, class: "btn btn-xs btn-info" %>
-        <%= link_to "Delete", root_path, class:"btn btn-xs btn-default" %>
+        <div class ="icon"><%= link_to "Edit", edit_wall_path(wall.id), class: "btn btn-xs btn-info" %>
+          <%= link_to "Delete", wall_path(wall.id), method: :delete, class:"btn btn-xs btn-default" %>
+        </div>
       </div>
+
+      <% end %>
+
     </div>
-    <%= link_to "To top#index", root_path, class:"btn btn-link" %>
+    <%= link_to "Back", root_path, class:"btn btn-lg btn-link" %>
+
   </div>
 
 </div>

@@ -1,0 +1,22 @@
+<div class = "row col-md-6 col-md-offset-3">
+  <div class= "col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+
+    <h3>以下の内容で送信する</h3>
+    <%= form_for(@wall) do |f| %>
+    <%= f.hidden_field :title %>
+    <%= f.hidden_field :picture_cache, id: :wall_picture %>
+
+    <p>タイトル：<%= @wall.title %></p>
+    <%= image_tag(@wall.picture) %>
+    <%= f.submit "投稿", class: "btn btn-lg btn-primary"%>
+    <% end %>
+
+    <%= form_for(@wall, url: new_wall_path, method: 'get') do |f| %>
+    <%= f.hidden_field :title %>
+    <%= f.hidden_field :picture_cache, id: :wall_picture %>
+    <%= f.submit "戻る", name: "back" %> <%# parameterにname属性"back"を加える %>
+    <% end %>
+
+  </div>
+  <%= link_to "Back to Wall", walls_path, class:"btn btn-lg btn-link"%>
+</div>

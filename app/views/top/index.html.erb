@@ -1,40 +1,22 @@
 
+<div class = "container-fluid">
 
-<!--<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
--->
+  <section class="main">
+    <div class="row col-md-8 col-md-offset-2">
 
-  <div class="container">
-    <h1><strong>Welcome to Buzzwalls</strong></h1>
+      <h1><strong>Welcome # Buzzwalls</strong></h1>
 
-    <p class="flash"><%= notice %><%= alert %></p>
+      <p class="flash"></p>
+      <% if notice.nil? == false %>
+        <div class="alert alert-success" role="alert" ><%= notice %><%= alert %></div>
+      <% end %>
+      <%= link_to "Go to wall", walls_path, class: 'btn btn-lg btn-default' %><br>
 
-      <div class="container-main">
-        <h1>top#index</h1>
-        <%= link_to "To walls#index", walls_path, class: 'btn btn-link' %><br>
-      </div>
+    </div>
 
-      <div class="container-contact">
-      <section class="contact bg-primary" id="contact">
-        <h2>We
-          <i class="fa fa-heart"></i>
-          you to sign in with</h2>
-          <ul class="list-inline list-social">
-            <li class="list-inline-item social-twitter">
-              <a href="#">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item social-facebook">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li class="list-inline-item social-google-plus">
-              <a href="#">
-                <i class="fa fa-google-plus"></i>
-              </a>
-            </li>
-          </ul>
-      </section>
-      </div>
-  </div>
+    <div class="row col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
+      <img src="<%= asset_path "iphone.jpg" %>">
+    </div>
+  </section>
+
+</div>
